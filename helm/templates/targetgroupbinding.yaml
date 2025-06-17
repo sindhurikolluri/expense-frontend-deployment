@@ -5,7 +5,15 @@ metadata:
   namespace: expense
 spec:
   serviceRef:
-    name: frontend # route traffic to the awesome-service
+    name: frontend
     port: 80
   targetGroupARN: {{ .Values.tgb.arn }}
   targetType: ip
+  networking:
+    ingress:
+      - from:
+          - securityGroup:
+              groupID: sg-0bce2729d3604ba5a
+        ports:
+          - protocol: TCP
+            port: 80

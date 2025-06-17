@@ -4,4 +4,4 @@ deployment:
 hpa:
   utilisation: 5
 tgb:
-  arn: arn:aws:elasticloadbalancing:us-east-1:717279725557:loadbalancer/app/expense-dev-ingress-alb/3d8cc695480e7997
+  arn: arn:aws:elasticloadbalancing:us-east-1:717279725557:targetgroup/expense-dev/ee63307f0885f904
